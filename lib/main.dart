@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:math_expressions/math_expressions.dart';
 
 import 'buttons.dart';
@@ -173,7 +174,21 @@ class _HomePageState extends State<HomePage> {
                       }
                     }
                 ),
+              ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextButton(
+                  onPressed: () {
+                    SystemNavigator.pop();
+    },
+                  child: const Text("Exit", style: TextStyle(
+                    fontSize: 30, color: Colors.red
+                  ),
+                  )
               )
+            ],
           )
         ],
       ),
