@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Calculator"),
+        centerTitle: true,
       ),
       backgroundColor: Colors.white38,
       body: Column(
@@ -179,15 +180,18 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextButton(
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 0),
+              ),
                   onPressed: () {
-                    SystemNavigator.pop();
-    },
+                SystemNavigator.pop();
+              },
                   child: const Text("Exit", style: TextStyle(
-                    fontSize: 30, color: Colors.red
+                      fontSize: 30, color: Colors.black
                   ),
-                  )
-              )
+                  ))
             ],
           )
         ],
